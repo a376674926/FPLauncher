@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="sms_templates">
+        <item>Call me now.</item>
+        <item>How about lunch?</item>
+        <item>Be right back.</item>
+        <item>I am busy now.</item>
+        <item>Sorry!</item>
+        <item>Thank you!</item>
+        <item>How was the day?</item>
+        <item>Long time no see.</item>
+        <item>Lots of luv!</item>
+        <item>How are you?</item>
+    </string-array>
+    <string-array name="callLog_menu_contact">
+        <item>@string/menu_lookup</item>
+        <item>@string/menu_call</item>
+        <item>@string/text_delete</item>
+        <item>@string/menu_send_message</item>
+    </string-array>
+    <string-array name="callLog_menu_unKnow">
+        <item>@string/menu_lookup</item>
+        <item>@string/menu_call</item>
+        <item>@string/text_delete</item>
+        <item>@string/menu_send_message</item>
+        <item>@string/text_save_contact</item>
+    </string-array>
+    <string-array name="contact_menu">
+        <item>@string/menu_call</item>
+        <item>@string/menu_send_message</item>
+        <item>@string/menu_lookup</item>
+        <item>@string/menu_edit</item>
+        <item>@string/text_delete</item>
+    </string-array>
+    <string-array name="contact_no_contacts_menu">
+        <item>@string/text_select</item>
+        <!-- item>@string/phonebook_settings</item -->
+    </string-array>
+    <string-array name="menu_phonebook_setting">
+        <item>@string/import_contacts</item>
+        <item>@string/family_number_set</item>
+    </string-array>
+    <string-array name="menu_tools">
+        <item>@string/function_deskclock</item>
+        <item>@string/function_calculator</item>
+        <item>@string/function_calender</item>
+        <!--item>@string/function_flashlight</item-->
+    </string-array>
+    <string-array name="menu_multi_media">
+        <item>@string/fmradio_title</item>
+        <item>@string/function_music</item>
+        <item>@string/soundrecorder_title</item>
+        <item>@string/function_camera</item>
+        <item>@string/gallery_title</item>
+        <item>@string/filemanager_title</item>
+    </string-array>
+
+</resources>

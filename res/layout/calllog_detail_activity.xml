@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/detail_contact_name"
+        style="@style/mms_main_item_style"
+        android:text="@string/number_unknow"
+        android:textSize="@dimen/text_size_40" />
+
+    <TextView
+        android:id="@+id/detail_contact_number"
+        style="@style/mms_main_item_style"
+        android:layout_marginLeft="@dimen/common_margin_10"
+        android:textSize="@dimen/text_size_40" />
+
+    <View style="@style/line_horizontal" />
+
+    <RelativeLayout style="@style/contact_item" >
+
+        <TextView
+            android:id="@+id/detail_contact_type"
+            style="@style/call_log_detail_title"
+            android:text="@string/text_unknow" />
+    </RelativeLayout>
+
+    <View style="@style/line_horizontal" />
+
+    <LinearLayout
+        android:id="@+id/call_log_second_item"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mms_main_item_bg_no_hi"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/call_log_detail_title"
+            android:text="@string/text_call_duration" />
+
+        <TextView
+            android:id="@+id/detail_contact_duration"
+            style="@style/call_log_detail_time"
+            android:layout_marginLeft="5dp" />
+    </LinearLayout>
+
+    <View style="@style/line_horizontal" />
+
+    <LinearLayout
+        android:id="@+id/call_log_third_item"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mms_main_item_bg_no_hi"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/call_log_detail_title"
+            android:text="@string/text_call_time" />
+
+        <TextView
+            android:id="@+id/detail_contact_date"
+            style="@style/call_log_detail_time"
+            android:layout_marginLeft="5dp" />
+    </LinearLayout>
+
+    <View style="@style/line_horizontal" />
+
+</LinearLayout>

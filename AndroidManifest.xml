@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.stj.fplauncher"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_MMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="15" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="cn.stj.fplauncher.Launcher"
+            android:launchMode="singleTask"
+            android:clearTaskOnLaunch="true"
+            android:stateNotNeeded="true"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="nosensor"
+            android:resumeWhilePausing="false"
+            android:taskAffinity=""
+            android:enabled="true"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="cn.stj.fplauncher.MainMenu" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.stj.fplauncher.contacts.ContactsListActivity"
+            android:icon="@drawable/contacts_icon"
+            android:label="@string/title_contacts" >
+            <intent-filter>
+                <action android:name="cn.stj.action.START_CONTACTS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="cn.stj.fplauncher.contacts.EditContactsActivity" />
+        <activity android:name="cn.stj.fplauncher.contacts.ContactsDetailActivity" />
+        <activity android:name="cn.stj.fplauncher.contacts.ContactOptionsMenuActivity" />
+        <activity android:name="cn.stj.fplauncher.contacts.PhoneBookSettings" />
+        <activity
+            android:name="cn.stj.fplauncher.contacts.FamilyNumberSet"
+            android:launchMode="singleTask" />
+        <activity android:name="cn.stj.fplauncher.contacts.RemoveFamilyNumber" />
+        <activity android:name="cn.stj.fplauncher.phone.DialActivity" >
+            <intent-filter>
+                <action android:name="cn.stj.action.START_PHONE_DIAL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="cn.stj.fplauncher.phone.AddNewContactActivity" >
+            <intent-filter>
+                <action android:name="cn.stj.action.SAVE_NEW_CONTACT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Service to save a contact -->
+        <service
+            android:name="cn.stj.fplauncher.service.ContactOperationService"
+            android:exported="false" />
+
+        <activity
+            android:name="cn.stj.fplauncher.callLog.CallLogListActivity"
+            android:icon="@drawable/phone_icon"
+            android:label="@string/title_calllog" >
+            <intent-filter>
+                <action android:name="cn.stj.action.START_CALLLOG" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="cn.stj.fplauncher.callLog.CallLogOptionsMenuActivity" />
+        <activity android:name="cn.stj.fplauncher.callLog.CallLogDetailActivity" />
+        <activity android:name="cn.stj.fplauncher.callLog.CallLogDetailListActivity" />
+        <activity
+            android:name="cn.stj.fplauncher.tools.ToolsListActivity"
+            android:icon="@drawable/application_icon"
+            android:label="@string/application_menumain_title"
+            android:taskAffinity="android.task.ToolsListActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <!--category android:name="android.intent.category.LAUNCHER" /-->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.stj.fplauncher.multimedia.MultiMediaOperationActivity"
+            android:icon="@drawable/multi_media_icon"
+            android:label="@string/multi_media_title"
+            android:taskAffinity="android.task.MultiMediaOperationActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <!--category android:name="android.intent.category.LAUNCHER" /-->
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
